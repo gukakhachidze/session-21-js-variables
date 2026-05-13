@@ -5,7 +5,7 @@
   How to use this file:
   1. Read each short explanation.
   2. Run this file with:
-       node javascript-basics-tasks.js
+       node script.js
   3. Complete the TASK sections directly in this file.
   4. Use console.log() often to check your answers.
 
