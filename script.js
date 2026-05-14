@@ -78,6 +78,10 @@ console.log("updated let:", currentName);
 
 // Write your code here:
 
+const firstName = "Guka";
+let userAge = 30;
+let isStudent = true;
+
 /*
   TASK 2:
   Create a variable called score with value 10.
@@ -86,6 +90,9 @@ console.log("updated let:", currentName);
 */
 
 // Write your code here:
+let score = 10;
+score = 20;
+console.log(score);
 
 // ---------------------------------------------------------------------------
 // 2. Variable Naming
@@ -126,6 +133,9 @@ console.log("naming examples:", userName, totalPrice, isLoggedIn);
 */
 
 // Write your code here:
+const productName = "Pepsi";
+let productPrice = 2.9;
+let isProductAvailable = true;
 
 // ---------------------------------------------------------------------------
 // 3. Primitive Types
@@ -171,6 +181,22 @@ console.log("typeof emptyValue:", typeof emptyValue); // historical JS behavior:
 */
 
 // Write your code here:
+console.log("----------------------------------------------------------");
+let characterName = "BigBoss99";
+console.log(city);
+
+let characterLevel = 99;
+console.log(`Your Level Is ${characterLevel}`);
+
+let isAlive = true;
+console.log(`Your character is ${isAlive}`);
+
+let myUndefined = undefined;
+console.log(myUndefined);
+
+let myNull = null;
+console.log(myNull);
+console.log("----------------------------------------------------------");
 
 /*
   TASK 5:
@@ -178,12 +204,12 @@ console.log("typeof emptyValue:", typeof emptyValue); // historical JS behavior:
   Then uncomment the lines and check.
 */
 
-// console.log(typeof "100");
-// console.log(typeof 100);
-// console.log(typeof true);
-// console.log(typeof undefined);
-// console.log(typeof null);
-
+console.log(typeof "100"); //- სტრინგი
+console.log(typeof 100); //- ნამბერი
+console.log(typeof true); //- ბულიანი
+console.log(typeof undefined); //- ანდეფაინდი
+console.log(typeof null); //- ობიექტი
+console.log("----------------------------------------------------------");
 // ---------------------------------------------------------------------------
 // 4. Reference Types
 // ---------------------------------------------------------------------------
@@ -234,7 +260,23 @@ console.log("userB age:", userB.age); // 30
 */
 
 // Write your code here:
+const car = {
+  brand: "Mercedes-Benz",
+  model: "W124",
+  year: 1992,
+};
 
+const sameCar = car;
+sameCar.year = 1995;
+
+console.log(`Car Year: ${car.year}`);
+console.log(`SameCar Year : ${sameCar.year}`);
+
+console.log("---------------------------------------------");
+const un = undefined;
+console.log(un);
+console.log("ს ა ტ ე ს ტ ო დ");
+console.log("------------------------------------");
 /*
   TASK 7:
   Create an array called colors with three colors.
@@ -248,6 +290,14 @@ console.log("userB age:", userB.age); // 30
 
 // Write your code here:
 
+const colorArray = ["Red", "Blue", "Green"];
+const favoriteColors = colorArray;
+
+favoriteColors.push("Black");
+favoriteColors.push("Yellow");
+
+console.log(`ColorArray: ${colorArray}`);
+console.log(`FavColor: ${favoriteColors}`);
 // ---------------------------------------------------------------------------
 // 5. Objects
 // ---------------------------------------------------------------------------
@@ -289,7 +339,20 @@ console.log("updated person:", person);
 */
 
 // Write your code here:
+console.log("---------------------------------------------");
+const book = {
+  title: "Mein Kampf",
+  author: "Adolf Hitler",
+  pages: 999,
+  isRead: false,
+};
 
+console.log(`Book Title: ${book.title}`);
+
+book.isRead = true;
+book.rating = 3.4;
+console.log(book);
+console.log("---------------------------------------------");
 /*
   TASK 9:
   Create an object called profile.
@@ -307,7 +370,19 @@ console.log("updated person:", person);
 */
 
 // Write your code here:
+console.log("---------------------------------------------");
+const userProfile = {
+  name: "Guka",
+  email: "guka.khachidze@gmail.com",
+  address: {
+    city: "Rustavi",
+    street: "17th District",
+    buildingNumber: "6",
+  },
+};
 
+console.log(userProfile.address.city);
+console.log("---------------------------------------------");
 // ---------------------------------------------------------------------------
 // 6. Arrays
 // ---------------------------------------------------------------------------
@@ -336,6 +411,16 @@ console.log("after push:", fruits);
 */
 
 // Write your code here:
+console.log("---------------------------------------------");
+
+const numbersArray = [1, 2, 3, 4, 5];
+console.log(`First Number From Array: ${numbersArray[0]}`);
+console.log(`Last Number From Array: ${numbersArray[4]}`);
+
+numbersArray.push(6);
+console.log(`Array Length Is: ${numbersArray.length}`);
+
+console.log("---------------------------------------------");
 
 /*
   TASK 11:
@@ -349,6 +434,14 @@ console.log("after push:", fruits);
 
 // Write your code here:
 
+const users = [
+  { name: "George Russell", age: 28 },
+  { name: "Kimi Antonelli", age: 19 },
+  { name: "Lewis Hamilton", age: 41 },
+];
+
+console.log(`Second user name: ${users[1].name}`);
+console.log("---------------------------------------------");
 // ---------------------------------------------------------------------------
 // 7. Scope
 // ---------------------------------------------------------------------------
@@ -398,6 +491,17 @@ if (true) {
 */
 
 // Write your code here:
+console.log("---------------------------------------------");
+
+function greetUser(userName) {
+  const message = `Hello ${userName}, Welcome to our site.`;
+  console.log(message);
+}
+
+greetUser("Jemala");
+// console.log(message); - ერორი: Message is not defined
+
+console.log("---------------------------------------------");
 
 /*
   TASK 13:
@@ -412,6 +516,14 @@ if (true) {
 */
 
 // Write your code here:
+console.log("---------------------------------------------");
+if (true) {
+  let letFirstName = "Gela Gnolidze";
+  const constFirstName = "Ioseb Stalini";
+  console.log(`let: ${letFirstName}, const: ${constFirstName}`);
+}
+console.log("---------------------------------------------");
+//console.log(`let: ${letFirstName}, const: ${constFirstName}`); // ერორი - ორივეზე Let-ზე და const-ზეც
 
 // ---------------------------------------------------------------------------
 // 8. var, let, and const Scope Difference
@@ -439,7 +551,7 @@ function varScopeExample() {
 }
 
 varScopeExample();
-
+console.log("---------------------------------------------");
 /*
   TASK 14:
   Create a function called testVarLetConst.
@@ -455,7 +567,27 @@ varScopeExample();
 */
 
 // Write your code here:
+console.log("---------------------------------------------");
 
+function testVarLetConst() {
+  if (true) {
+    var myVarVariable = "Varex";
+    let myLetVariable = "Letex";
+    const myConstVariable = "Constex";
+
+    console.log(myVarVariable);
+    console.log(myLetVariable);
+    console.log(myConstVariable);
+  }
+
+  // console.log(myVarVariable); // - მუშაობს
+  // console.log(myLetVariable); // - ერორი
+  // console.log(myConstVariable); // - ერორი
+}
+testVarLetConst();
+
+// console.log(myVarVariable); // - ერორი
+console.log("---------------------------------------------");
 // ---------------------------------------------------------------------------
 // 9. Hoisting
 // ---------------------------------------------------------------------------
@@ -483,16 +615,16 @@ var hoistedVar = "I was declared later";
   Uncomment one example at a time.
   Run the file after each change.
 */
-
-// console.log(myVar);
-// var myVar = 5;
+console.log("---------------------------------------------");
+console.log(myVar);
+var myVar = 5;
 
 // console.log(myLet);
 // let myLet = 5;
 
 // console.log(myConst);
 // const myConst = 5;
-
+console.log("---------------------------------------------");
 // ---------------------------------------------------------------------------
 // 10. Type Conversion
 // ---------------------------------------------------------------------------
@@ -528,19 +660,36 @@ console.log("string minus number:", "5" - 2); // 3
 */
 
 // Write your code here:
+console.log("---------------------------------------------");
 
+let textNumber = "123";
+let strNumber = Number(textNumber);
+console.log(strNumber, typeof strNumber);
+
+let myNumber = 456;
+let textMyNumber = String(myNumber);
+console.log(textMyNumber, typeof textMyNumber);
+
+let zeroNumber = 0;
+let boolZero = Boolean(zeroNumber);
+console.log(boolZero, typeof boolZero);
+
+let oneNumber = 1;
+let boolOne = Boolean(oneNumber);
+console.log(boolOne, typeof boolOne);
+console.log("---------------------------------------------");
 /*
   TASK 17:
   Predict the output before running.
   Then uncomment and check.
 */
 
-// console.log("10" + 5);
-// console.log("10" - 5);
-// console.log(Number("hello"));
-// console.log(Boolean(""));
-// console.log(Boolean("hello"));
-
+console.log("10" + 5);
+console.log("10" - 5);
+console.log(Number("hello"));
+console.log(Boolean(""));
+console.log(Boolean("hello"));
+console.log("---------------------------------------------");
 // ---------------------------------------------------------------------------
 // 11. Comparison
 // ---------------------------------------------------------------------------
@@ -562,13 +711,13 @@ console.log('"5" == 5:', "5" == 5);
   Predict each result.
   Then uncomment and run.
 */
-
-// console.log(10 === 10);
-// console.log("10" === 10);
-// console.log(true === 1);
-// console.log(null === undefined);
-// console.log(null == undefined);
-
+console.log("---------------------------------------------");
+console.log(10 === 10); // True
+console.log("10" === 10); // False
+console.log(true === 1); // False
+console.log(null === undefined); // False
+console.log(null == undefined); // True
+console.log("---------------------------------------------");
 // ---------------------------------------------------------------------------
 // 12. Object Copying
 // ---------------------------------------------------------------------------
@@ -629,6 +778,23 @@ console.log("copied order customer:", copiedOrder.customer.name);
 */
 
 // Write your code here:
+console.log("---------------------------------------------");
+
+const laptop = {
+  brand: "Lenovo",
+  memory: 16,
+  owner: "Guka",
+};
+
+const copiedLaptop = {
+  ...laptop,
+};
+
+copiedLaptop.owner = "George";
+console.log(laptop);
+console.log(copiedLaptop);
+
+console.log("---------------------------------------------");
 
 /*
   TASK 20:
@@ -649,6 +815,25 @@ console.log("copied order customer:", copiedOrder.customer.name);
 */
 
 // Write your code here:
+console.log("---------------------------------------------");
+
+const company = {
+  name: "LTD",
+  address: {
+    city: "Rustavi",
+    street: "Megovroba Av",
+  },
+};
+
+const copiedCompany = {
+  ...company,
+};
+
+copiedCompany.address.city = "Batumi";
+console.log(company);
+console.log(copiedCompany);
+
+console.log("---------------------------------------------");
 
 // ---------------------------------------------------------------------------
 // 13. Final Practice
@@ -679,6 +864,34 @@ console.log("copied order customer:", copiedOrder.customer.name);
 
 // Write your code here:
 
+console.log("---------------------------------------------");
+
+const userProfileObj = {
+  id: 1,
+  firstName: "Guka",
+  lastName: "Khachidze",
+  age: 30,
+  email: "guka.khachidze@gmail.com",
+  isActive: true,
+  skills: ["HTML", "CSS", "JavaScript"],
+  address: {
+    city: "Rustavi",
+    street: "17th District",
+  },
+};
+
+console.log(`User Fullname: ${userProfileObj.firstName} ${userProfileObj.lastName}`);
+console.log(`First Skill: ${userProfileObj.skills[0]}`);
+
+userProfileObj.skills.push("C#");
+userProfileObj.skills.push("SQL");
+userProfileObj.address.city = "Tbilisi";
+userProfileObj["isActive"] = false;
+userProfileObj["address"]["city"] = "Batumi";
+console.log(userProfileObj);
+
+console.log("---------------------------------------------");
+
 /*
   FINAL TASK 2:
   Create two objects:
@@ -701,6 +914,39 @@ console.log("copied order customer:", copiedOrder.customer.name);
 */
 
 // Write your code here:
+console.log("---------------------------------------------");
+
+const studentOne = {
+  name: "George",
+  grade: [88, 68, 55, 51],
+};
+
+const studentTwo = {
+  name: "Kimi",
+  grade: [99, 82, 44, 70],
+};
+
+const firstStudentGradeAvg =
+  (studentOne.grade[0] + studentOne.grade[1] + studentOne.grade[2] + studentOne.grade[3]) /
+  studentOne.grade.length;
+
+const secondStudentAvgGrade =
+  (studentTwo.grade[0] + studentTwo.grade[1] + studentTwo.grade[2] + studentTwo.grade[3]) /
+  studentTwo.grade.length;
+
+console.log(
+  `First student avg grade is: ${firstStudentGradeAvg}, Second student avg grade is: ${secondStudentAvgGrade}`
+);
+
+if (firstStudentGradeAvg > secondStudentAvgGrade) {
+  console.log(`First Student Average Grade Is Higher - ${studentOne.name}`);
+} else if (firstStudentGradeAvg < secondStudentAvgGrade) {
+  console.log(`Second Student Average Grade Is Higher - ${studentTwo.name}`);
+} else {
+  console.log(`Both Student Have Equal Grade..`);
+}
+
+console.log("---------------------------------------------");
 
 /*
   FINAL TASK 3:
@@ -726,5 +972,21 @@ console.log("copied order customer:", copiedOrder.customer.name);
 */
 
 // Write your code here:
+
+function describeValue(value) {
+  console.log(value);
+
+  if (value === null) {
+    console.log(`VALUE IS NULL`);
+  } else if (Array.isArray(value)) {
+    console.log(`VALUE TYPE IS ARRAY`);
+  } else if (typeof value === "object") {
+    console.log(`VALUE IS OBJECT`);
+  } else {
+    console.log(`VALUE TYPE IS: ${typeof value}`);
+  }
+}
+
+describeValue({ name: 1, name2: 2 });
 
 console.log("End of practice file");
